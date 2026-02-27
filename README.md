@@ -43,6 +43,6 @@ A `.nojekyll` file is included so GitHub serves files as-is.
 ----------------------------------------
 BORING STUFF
 ----------------------------------------
-Maintainer is Jaidyn Levesque <jadedctrl@teknik.io>,
+Maintainer is Jaidyn Levesque <jadedctrl@posteo.net>,
 license is CC 0,
 and sauce is at https://git.eunichx.us/libertybsd-website
