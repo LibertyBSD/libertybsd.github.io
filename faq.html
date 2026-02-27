@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+ ________________________________________
+( q-quick, think of something clever...! )
+ ----------------------------------------
+        o   ^__^
+         o  (oo)\_______
+            (__)\       )\/\
+         /      ||----w |
+        /       ||     ||
+ __________________________________
+< U-uhm... hello, world! /(;~:)\   >
+ ----------------------------------
+
+-->
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="res/style.css">
+	<meta charset="UTF-8">
+	<title>LBSD - FAQs</title>
+</head>
+
+<body>
+
+<center>
+<table border="2">
+	<tr>
+		<td>
+			<a href="index.html">Index</a>
+		</td>
+		<td>
+			<a href="download.html">Downloads</a>
+		</td>
+		<td>
+			<a href="faq.html">FAQs</a>
+		</td>
+		<td>
+			<a href="https://github.com/LibertyBSD/libertybsd-website">Git</a>
+		</td>
+	</tr>
+</table>
+</center>
+
+<h1>Frequently Asked Questions</h1>
+
+<ul id="faq">
+	<li class="question" id="arch">What architectures does LBSD support?</li>
+	<li class="answer">Since 5.9, both <code>amd64</code> and <code>i386</code> are
+supported.</li>
+
+	<li class="question" id="fsf">Is LibertyBSD FSF-approved?</li>
+	<li class="answer">We're going through the process to be approved as FSDG-compliant.</li>
+
+	<li class="question" id="errata">So, what about security updates…?</li>
+	<li class="answer">You can find patches <a href='errata.html'>here</a>.
+You can manually compile and apply the patches yourself, if you want.<br />
+Or you could use <code>syspatch</code>. Whatever floats your boat.</li>
+
+	<li class="question" id="man">Where are the man-pages?</li>
+	<li class="answer">In 5.6, man-pages were excluded-- but since then, they've been
+included by default. We've added on to them, even!
+<code>free-software(7)</code> and <code>fsdg(7)</code>, specifically.</li>
+
+	<li class="question" id="contact">Where can I contact you, or get some help?</li>
+	<li class="answer" id="contact-answer">You can write to
+<a href='https://raddle.me/f/libertybsd'>/f/libertybsd</a> at raddle.me
+(you're certain to get a response there), the #libertybsd IRC channel at
+irc.freenode.net (almost certain to get a response, if a tad delayed), or
+<a href='https://reddit.com/r/libertybsd'>/r/libertybsd</a> at reddit.com
+(unlikely to get a response there).<br>
+If it's a more private matter, you can e-mail Jaidyn &lt;jadedctrl AT teknik.io&gt;.</li>
+
+	<li class="question" id="sources">Cool, whatever. Where's the sauce, mate?</li>
+	<li class="answer">You can find the patched source-code in your local FTP/HTTP
+mirror under 'src.tar.gz', 'sys.tar.gz', and 'xenocara.tar.gz'. If you want
+the scripts used to patch it, you'll find those over at
+<a href='https://git.eunichx.us/libertybsd-scripts'>the git repo</a>.</li>
+
+	<li class="question" id="non-free">Aha! I've found something non-free in LibertyBSD!</li>
+	<li class="answer">Impressive eyes you've got there!
+<a href='faq.html#contact'>Contact us</a> right away, please!
+(According to me, you deserve a GNU buck. ;))</li>
+
+	<li class="question" id="problems">I have a problem with LBSD. Can I use the OpenBSD mailing list?</li>
+	<li class="answer">You really shouldn't! LibertyBSD might be a simple downstream,
+but it <i>does</i> have modifications-- so you shouldn't report bugs unless
+replicated in OpenBSD, or ask for help. Don't bother them, please! Instead,
+bother us. We'll help you the best we can. ;)</li>
+
+	<li class="question" id="ports">Where's the ports tree? Package repo?</li>
+	<li class="answer">They're in your mirror's directory for your version-- under
+'packages' for the repo, and 'ports.tar.gz' for the ports tree. (The ports
+tree and repo are pure and squeaky-clean, by the way~)</li>
+</ul>
+
+<footer>
+<hr />
+
+<center>
+<table border="2">
+	<tr>
+		<td><a href="faq.html">English</a></td>
+		<td><a href="es/faq.html">Español</a></td>
+		<td><a href="eo/faq.html">Esperanto</a></td>
+	</tr>
+</table>
+</center>
+</footer>
+
+</body>
+</html>

@@ -66,7 +66,7 @@ faq_qfsf="¿Es LibertyBSD una distribución «aprobada por la FSF»?"
 faq_afsf="No. Pero estamos intentando que sea aprobada."
 faq_qerrata="¿Qué hay acerca de las actualizaciones de seguridad?"
 faq_aerrata="You can find patches <a href='errata.shtml'>here</a>.
-You can manually compile and apply the patches yourself, if you want.</br>
+You can manually compile and apply the patches yourself, if you want.<br />
 Or you could use <code>syspatch</code>. Whatever floats your boat."
 faq_qman="¿Dónde están las páginas de manual?"
 faq_aman="En la 5.6, todas las páginas de manual excepto las de xenocara
@@ -77,10 +77,10 @@ en falta ninguna."
 faq_qcontact="¿Cómo puedo contactar con vosotros?/¡Tengo una pregunta que no
 está resuelta aquí!"
 faq_acontact="Si prefieres IRC, puedes encontrarnos en #libertybsd de freenode.
-Si eso falla, prueba el <a href='https://raddle.me/f/libertybsd>
-/f/raddle</a>/<a href='https://reddit.com/r/libertybsd'>/r/libertybsd</a>.
-Finalmente, si eso también falla, envíame un correo electrónico: <jadedctrl @
-teknik.io>"
+Si eso falla, prueba el <a href='https://raddle.me/f/libertybsd'>
+/f/libertybsd</a>/<a href='https://reddit.com/r/libertybsd'>/r/libertybsd</a>.
+Finalmente, si eso también falla, envíame un correo electrónico: &lt;jadedctrl @
+teknik.io&gt;"
 faq_qsources="¿Dónde está el código fuente?"
 faq_asources="Lo encontrarás en ‘src.tar.gz’, ‘sys.tar.gz’ y ‘xenocara.tar.gz’.
 Otras fuentes se pueden encontrar

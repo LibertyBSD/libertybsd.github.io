@@ -1,54 +1,44 @@
 ===============================================================================
-LIBERTYBSD-WEBSITE                                      Pretty self-explanatory
+LIBERTYBSD-WEBSITE                             Static site for GitHub Pages
 ===============================================================================
 
-The LBSD site is written as simple HTML-- no fancy Markdown or whatever.
-You can find the raw HTML in base/*.shtml
+This repository now contains prebuilt static HTML pages and shared assets.
+There is no server-side SSI or shell execution at runtime.
 
 ----------------------------------------
-USAGE
+SITE STRUCTURE
 ----------------------------------------
-To generate the full HTML for every version (in their own directories) run
-	`sh gen.sh`
-with the repo as your CWD.
+English pages (root):
+	- index.html
+	- download.html
+	- faq.html
+	- errata.html
 
+Localized pages:
+	- es/index.html, es/download.html, es/faq.html, es/errata.html
+	- eo/index.html, eo/download.html, eo/faq.html, eo/errata.html
 
-----------------------------------------
-EDITING
-----------------------------------------
-When editing the HTML, make sure to edit the file in "base/*.shtml".
-When (if) you are adding a new string that can possibly be translated, make
-sure to add a variable for it in "res/lang/en.sh" (at least), and to add
-the string properly:
-
-	<!--ml.sh LL your_strings_variable_name"-->
-
-Of course, replace "your_strings_variable_name" with whatever variable-name
-you wrote it as in "res/lang/en.sh".
-
+Shared assets:
+	- res/style.css
+	- res/img/*
 
 ----------------------------------------
-MULTI-LANG
+LOCAL REGENERATION
 ----------------------------------------
-Multi-lang is handled by embedded server-side includes in the HTML-- every
-place a string would ordinarily go is replaced by a call to the script
-"res/bin/ml.sh" with two arguments:
-	* lang-code
-	* string-name
+If you edit translation values under `res/lang/*.sh`, regenerate all static
+pages with:
+	`./gen.sh`
 
-That call, in the HTML, looks like mentioned above in EDITING.
-
-All strings are stored as shell variables in "res/lang/" under their
-respective langcode.
-
+This rewrites the HTML pages listed above and keeps links compatible with
+GitHub Pages project URLs (relative paths, no domain-root assumptions).
 
 ----------------------------------------
-CREDITS
+GITHUB PAGES
 ----------------------------------------
-Spanish translation by jorgesumle,
-Esperanto translation mainly by Tirifto,
-various contributions by Jimmybot.
+Deploy this repo as a static site from the repository root (main/master
+branch root folder).
 
+A `.nojekyll` file is included so GitHub serves files as-is.
 
 ----------------------------------------
 BORING STUFF

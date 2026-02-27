@@ -66,7 +66,7 @@ faq_qfsf="Is LibertyBSD FSF-approved?"
 faq_afsf="We're going through the process to be approved as FSDG-compliant."
 faq_qerrata="So, what about security updates…?"
 faq_aerrata="You can find patches <a href='errata.shtml'>here</a>.
-You can manually compile and apply the patches yourself, if you want.</br>
+You can manually compile and apply the patches yourself, if you want.<br />
 Or you could use <code>syspatch</code>. Whatever floats your boat."
 faq_qman="Where are the man-pages?"
 faq_aman="In 5.6, man-pages were excluded-- but since then, they've been
@@ -79,7 +79,7 @@ faq_acontact="You can write to
 irc.freenode.net (almost certain to get a response, if a tad delayed), or
 <a href='https://reddit.com/r/libertybsd'>/r/libertybsd</a> at reddit.com
 (unlikely to get a response there).<br>
-If it's a more private matter, you can e-mail Jaidyn <jadedctrl AT teknik.io>."
+If it's a more private matter, you can e-mail Jaidyn &lt;jadedctrl AT teknik.io&gt;."
 faq_qsources="Cool, whatever. Where's the sauce, mate?"
 faq_asources="You can find the patched source-code in your local FTP/HTTP
 mirror under 'src.tar.gz', 'sys.tar.gz', and 'xenocara.tar.gz'. If you want

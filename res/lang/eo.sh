@@ -61,7 +61,7 @@ faq_aarch="Ekde 5.9, ambaŭ <code>amd64</code> kaj <i>i386</i> estas subtenanta.
 faq_qfsf="Ĉu LibertyBSD estas aprobanta de la FSF (Libera Programo Organizaĵo)?"
 faq_afsf="Ne jam! Sed, ni tramarŝas al aprobiĝa nun, per via procedo!"
 faq_qerrata="Kaj, sekurecaj ĝisdatigoj…?"
-faq_aerrate="Ĝisdatigaj flikaĵoj ĉeestas <a href='errata.shtml'>ĉi tie</a>.</br>
+faq_aerrate="Ĝisdatigaj flikaĵoj ĉeestas <a href='errata.shtml'>ĉi tie</a>.<br />
 Vi povus fliki kaj kompili la ĝisdatigojn per viaj propraj manoj, aŭ vi povus
 uzi la <code>syspatch</code> programo. Laŭvolo."
 faq_qman="Kie estas la manpaĝoj?"
