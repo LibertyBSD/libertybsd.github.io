@@ -3,7 +3,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO_URL="https://github.com/LibertyBSD/libertybsd-website"
+GITHUB_URL="https://github.com/euxaristia/libertybsd-scripts/"
 
 # KEY [FALLBACK_KEY]
 get_value() {
@@ -125,13 +125,10 @@ render_header() {
 			<a href="index.html">$(ml header_index)</a>
 		</td>
 		<td>
-			<a href="download.html">$(ml header_download)</a>
-		</td>
-		<td>
 			<a href="faq.html">$(ml header_faqs)</a>
 		</td>
 		<td>
-			<a href="$REPO_URL">$(ml header_git)</a>
+			<a href="$GITHUB_URL">GitHub</a>
 		</td>
 	</tr>
 </table>
@@ -251,62 +248,49 @@ render_download() {
 	local lang="$1"
 	local out_file="$2"
 	local asset_prefix="$3"
+	local title
+	local heading
+	local message
+	local click_here
+	local home_label
+
+	case "$lang" in
+		en)
+			title="LBSD - Redirect"
+			heading="Redirecting to GitHub..."
+			message="The old downloads page has moved."
+			click_here="Click here if you are not redirected automatically."
+			home_label="Return to index"
+			;;
+		es)
+			title="LBSD - Redirección"
+			heading="Redirigiendo a GitHub..."
+			message="La antigua página de descargas se ha movido."
+			click_here="Haz clic aquí si no se redirige automáticamente."
+			home_label="Volver al índice"
+			;;
+		eo)
+			title="LBSD - Alidirekto"
+			heading="Alidirektado al GitHub..."
+			message="La malnova elŝuta paĝo translokiĝis."
+			click_here="Klaku ĉi tie se vi ne aŭtomate alidirektiĝas."
+			home_label="Reiri al indekso"
+			;;
+	esac
 
 	{
-		render_header "$lang" "$(ml title_downloads title_download)" "$asset_prefix/style.css"
+		render_header "$lang" "$title" "$asset_prefix/style.css"
 		cat <<EOF2
 
-<h2>$(ml download_downloads)</h2>
+<meta http-equiv="refresh" content="0; url=$GITHUB_URL">
 
-<h2>$(ml download_current_mirrors)</h2>
-
-<center>
-<table border="2">
-	<tr>
-		<td><b>$(ml download_host)</b></td>
-		<td><b>$(ml download_type)</b></td>
-		<td><b>$(ml download_location)</b></td>
-		<td><b>$(ml download_protocols)</b></td>
-	</tr>
-	<tr>
-		<td><a href="https://www.allbsd.org/">AllBSD</a></td>
-		<td>$(ml download_full)</td>
-		<td>$(ml location_chiba_japan)</td>
-		<td><a href="https://pub.allbsd.org/LibertyBSD/">HTTP(S)</a>,
-			<a href="ftp://ftp.allbsd.org/pub/LibertyBSD/">FTP</a>,
-			<a href="rsync://rsync.allbsd.org">rsync</a></td>
-	</tr>
-	<tr>
-		<td><a href="https://libertybsd.net/">LibertyBSD</a></td>
-		<td>$(ml download_full)</td>
-		<td>$(ml location_texas_usa)</td>
-		<td><a href="https://ftp.libertybsd.net/pub/LibertyBSD">HTTP(S)</a>,
-		<a href="ftp://ftp.libertybsd.net/pub/LibertyBSD">FTP</a></td>
-	</tr>
-</table>
-</center>
-
-<hr>
-
-<h2>$(ml download_defunct_mirrors)</h2>
-<p>$(ml download_defunct_mirrors_info)</p>
-
-<center>
-<table border="2">
-	<tr>
-		<td><b>$(ml download_host)</b></td>
-		<td><b>$(ml download_last_version)</b></td>
-		<td><b>$(ml download_location)</b></td>
-		<td><b>$(ml download_protocols)</b></td>
-	</tr>
-	<tr>
-		<td><a href="https://delwink.com/">Delwink Software</a></td>
-		<td>$(ml download_install_only)</td>
-		<td>$(ml location_usa)</td>
-		<td>HTTP(S)</td>
-	</tr>
-</table>
-</center>
+<h2>$heading</h2>
+<p>$message</p>
+<p><a href="$GITHUB_URL">$click_here</a></p>
+<p><a href="index.html">$home_label</a></p>
+<script>
+window.location.replace("$GITHUB_URL");
+</script>
 
 EOF2
 		render_footer "$lang" "download"

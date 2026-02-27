@@ -10,13 +10,13 @@ SITE STRUCTURE
 ----------------------------------------
 English pages (root):
 	- index.html
-	- download.html
 	- faq.html
 	- errata.html
+	- download.html (redirects to the GitHub scripts repo)
 
 Localized pages:
-	- es/index.html, es/download.html, es/faq.html, es/errata.html
-	- eo/index.html, eo/download.html, eo/faq.html, eo/errata.html
+	- es/index.html, es/faq.html, es/errata.html, es/download.html (redirect)
+	- eo/index.html, eo/faq.html, eo/errata.html, eo/download.html (redirect)
 
 Shared assets:
 	- res/style.css

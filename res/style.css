@@ -1,10 +1,38 @@
+:root
+{
+	--paper-bg: #f2e7d0;
+	--paper-text: #2b2216;
+	--paper-line: #836f51;
+	--paper-card: #f8efde;
+	--link: #2f5268;
+	--link-visited: #5b4370;
+}
+
 body
 {
 	text-align: center;
 	font-size: 16px;
+	background-color: var(--paper-bg);
+	color: var(--paper-text);
 
 	width: 70%;
 	margin: auto;
+}
+
+a
+{
+	color: var(--link);
+}
+
+a:visited
+{
+	color: var(--link-visited);
+}
+
+table
+{
+	background-color: var(--paper-card);
+	border-color: var(--paper-line);
 }
 
 img
@@ -15,6 +43,8 @@ img
 hr
 {
 	width: 100%;
+	border: 0;
+	border-top: 1px solid var(--paper-line);
 }
 
 td
